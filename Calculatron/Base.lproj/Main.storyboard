@@ -26,14 +26,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Meh-WS-tEZ">
-                                        <rect key="frame" x="187" y="0.0" width="186" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Meh-WS-tEZ">
+                                        <rect key="frame" x="187" y="0.0" width="187" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f8x-Yg-IHV">
-                                        <rect key="frame" x="373" y="0.0" width="187" height="30"/>
+                                        <rect key="frame" x="374" y="0.0" width="187" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -48,18 +48,30 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4o-VV-yRq">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="30"/>
                                         <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="operatorsOnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z5w-lC-tdo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhM-wp-AyM">
                                         <rect key="frame" x="140" y="0.0" width="140" height="30"/>
                                         <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="operatorsOnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j42-gl-ebz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5n-VN-qmU">
                                         <rect key="frame" x="280" y="0.0" width="140" height="30"/>
                                         <state key="normal" title="x"/>
+                                        <connections>
+                                            <action selector="operatorsOnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZXd-3n-dWS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ci-Yk-P0o">
                                         <rect key="frame" x="420" y="0.0" width="140" height="30"/>
                                         <state key="normal" title="/"/>
+                                        <connections>
+                                            <action selector="operatorsOnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hml-Zh-5o5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -77,6 +89,11 @@
                             <constraint firstItem="QcQ-tq-bQ4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wUD-xd-K5o"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="operandOne" destination="SPv-Xh-wZS" id="Sey-xa-FVY"/>
+                        <outlet property="operandTwo" destination="f8x-Yg-IHV" id="OY6-2u-R3X"/>
+                        <outlet property="operatorLabel" destination="f8x-Yg-IHV" id="TiU-Fd-GSc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
