@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QcQ-tq-bQ4">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QcQ-tq-bQ4" userLabel="Stack View Inputs">
                                 <rect key="frame" x="20" y="40" width="560" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SPv-Xh-wZS">
@@ -27,13 +27,13 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Meh-WS-tEZ">
-                                        <rect key="frame" x="187" y="0.0" width="187" height="30"/>
+                                        <rect key="frame" x="187" y="0.0" width="186" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f8x-Yg-IHV">
-                                        <rect key="frame" x="374" y="0.0" width="187" height="30"/>
+                                        <rect key="frame" x="373" y="0.0" width="187" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -42,11 +42,38 @@
                                     <constraint firstAttribute="height" constant="30" id="n6S-rn-zXY"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T5e-rZ-VDX" userLabel="Stack View Buttons">
+                                <rect key="frame" x="20" y="78" width="560" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4o-VV-yRq">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="30"/>
+                                        <state key="normal" title="+"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhM-wp-AyM">
+                                        <rect key="frame" x="140" y="0.0" width="140" height="30"/>
+                                        <state key="normal" title="-"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5n-VN-qmU">
+                                        <rect key="frame" x="280" y="0.0" width="140" height="30"/>
+                                        <state key="normal" title="x"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ci-Yk-P0o">
+                                        <rect key="frame" x="420" y="0.0" width="140" height="30"/>
+                                        <state key="normal" title="/"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jwi-9b-Y2P"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="T5e-rZ-VDX" firstAttribute="top" secondItem="QcQ-tq-bQ4" secondAttribute="bottom" constant="8" id="GcN-Fg-3lb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T5e-rZ-VDX" secondAttribute="trailing" id="Mia-te-ToS"/>
                             <constraint firstItem="QcQ-tq-bQ4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="SqL-eY-Zlh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QcQ-tq-bQ4" secondAttribute="trailing" id="Xjb-tw-O5Y"/>
+                            <constraint firstItem="T5e-rZ-VDX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rl4-Bd-qCG"/>
                             <constraint firstItem="QcQ-tq-bQ4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wUD-xd-K5o"/>
                         </constraints>
                     </view>
